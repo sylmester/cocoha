@@ -10,3 +10,6 @@ Steps:
 4. Generate high-resolution gammatone spectrograms with: `predictors/make_gammatone.ipynb` (apprx. 20 min)
 5. Generate predictor files with: `predictors/make_gammatone_predictors.ipynb` (approx 8 min)
 6. Estimate TRFs with: `analysis/estimate_trfs.ipynb` (>1 hour :0)
+
+
+:)
