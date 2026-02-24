@@ -15,8 +15,8 @@ After downloading and preparing the dataset, your folder structure should look l
 
 ```
 cocoha/
-├── data_preprocessed/   # Preprocessed EEG data
-├── stimuli/             # Audio stimuli
+├── data_preprocessed/   # Preprocessed EEG data (generated in step 1)
+├── stimuli/             # Audio stimuli (generated in step 1)
 ├── envelopes/           # Envelopes (generated in step 2)
 ├── eeg/                 # EEG data (generated in Step 3)
 ├── predictors/          # Predictor files (generated in Step 4)
@@ -30,9 +30,10 @@ cocoha/
 
 ### 1. **Download and Prepare the Dataset**
 
-1. Download the **stimuli**: [AUDIO.zip](https://zenodo.org/record/1199011/files/AUDIO.zip)
-2. Download the **preprocessed data**: [DATA_preproc.zip](https://zenodo.org/record/1199011/files/DATA_preproc.zip)
-3. Extract the contents into the `data_preprocessed/` and `stimuli/` folders, respectively.
+1. Use `load_data/load-data.ipynb` or download yourself from the following:
+2. Download the **stimuli**: [AUDIO.zip](https://zenodo.org/record/1199011/files/AUDIO.zip)
+3. Download the **preprocessed data**: [DATA_preproc.zip](https://zenodo.org/record/1199011/files/DATA_preproc.zip)
+4. Extract the contents into the `data_preprocessed/` and `stimuli/` folders, respectively.
 
 ---
 
