@@ -60,7 +60,7 @@ Run the notebook `import_dataset/save-eeg.ipynb` to generate EEG data files.
 
 ```bash
 # Example command to run the notebook
-jupyter notebook import_dataset/save-eeg.ipynb
+jupyter notebook load_data/load-preprocessed-eeg.ipynb
 ```
 
 This will:
@@ -88,7 +88,7 @@ This will:
 
 ### 5. **Estimate TRFs**
 
-Run the notebook `analysis/estimate_trfs.ipynb` to estimate Temporal Response Functions (TRFs).
+Run the notebook `analysis/estimate_envelope_trfs.ipynb` to estimate Temporal Response Functions (TRFs).
 
 ```bash
 # Example command to run the notebook
@@ -101,7 +101,7 @@ This step may take over an hour to complete, depending on your system.
 
 ### 6. **Visualize Results**
 
-Run the notebook `figures/plot_results.ipynb` to generate and save figures.
+Run the notebooks in `figures/` to generate and save figures.
 
 ```bash
 # Example command to run the notebook
