@@ -1,5 +1,6 @@
 import file_paths
 import re
+import numpy as np
 
 
 # Utility function to get subject list
@@ -15,3 +16,22 @@ def get_stimuli_paths():
 # Get subject data file path
 def get_subject_data_file(subject: str):
     return file_paths.DATA_PREPROC / f"{subject}_data_preproc.mat"
+
+
+# Utility function to convert mat_struct to python dict
+def matobj_to_dict(matobj):
+    """
+    Recursively convert mat_struct to Python dict.
+    """
+    import scipy.io
+    
+    if isinstance(matobj, scipy.io.matlab.mio5_params.mat_struct):
+        d = {}
+        for fieldname in matobj._fieldnames:
+            value = getattr(matobj, fieldname)
+            d[fieldname] = matobj_to_dict(value)
+        return d
+    elif isinstance(matobj, (np.ndarray, list)):
+        return [matobj_to_dict(e) for e in matobj]
+    else:
+        return matobj
